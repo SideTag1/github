@@ -1,46 +1,128 @@
-<!--
-  Hit RUN to see this project in action!
-  
-  This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
--->
-
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>comprunners</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+  <title>Modern Landing Page</title>
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .gradient-text {
+      background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .gradient-bg {
+      background: linear-gradient(120deg, #000428, #004e92);
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
 </head>
-  <body style="background-color: purple;">
-<body>
-  <main>
-    <h1 class="title">This CompRunners Official Website!</h1>
-    <h1 class="discrption">made by Danks</h1>
-    </p>
+<body class="gradient-bg text-white overflow-x-hidden">
+  <!-- Fixed Navigation -->
+  <nav class="fixed top-0 w-full glass z-50">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <span class="text-2xl font-bold gradient-text">Flash Runners</span>
+        <div class="space-x-4">
+          <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+          <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+          <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-    <section class="grid">
-      <a href="https://skyreaperisbetter.itch.io/comp-runners" class='card'>
-        <h2>Itch.io &rarr;</h2>
-        <p>download</p>
-      </a>
-
-
-      <a href="https://discord.gg/QsW2hxCRfb" class='card'>
-        <h2>Discord &rarr;</h2>
-        <p>Game Discord</p>
-      </a>
-
-
-      <section class="grid">
-        <a href="https://www.youtube.com/@Colbyon_unity" class='card'>
-          <h2>danks youtube &rarr;</h2>
-          <p>youtube</p>
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col items-center justify-center p-4 relative">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20"></div>
+    <div class="relative z-10 text-center">
+      <h1 class="text-6xl font-bold mb-6 gradient-text">Welcome to the Future</h1>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-12">Explore the digital landscape with style</p>
+      <div class="flex flex-wrap gap-6 justify-center">
+        <a href="https://itch.io/flashrunners" class="group relative px-8 py-4 glass rounded-xl hover:scale-105 transition-transform">
+          <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+          <span class="relative">itch.io</span>
         </a>
-        
-    </section>
-  </main>
-</body>
+        <a href="https://www.youtube.com/@colbyon_unity" class="group relative px-8 py-4 glass rounded-xl hover:scale-105 transition-transform">
+          <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-red-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+          <span class="relative">Dank's YouTube</span>
+        </a>
+        <a href="https://www.youtube.com/@SKYREAPERFRFR" class="group relative px-8 py-4 glass rounded-xl hover:scale-105 transition-transform">
+          <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+          <span class="relative">Skyreaper's YouTube</span>
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 float">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
 
+  <!-- About Section -->
+  <section id="about" class="min-h-screen relative">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10"></div>
+    <div class="relative glass mx-8 my-24 p-12 rounded-2xl">
+      <h2 class="text-4xl font-bold mb-8 gradient-text">About</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-6">
+          <p class="text-lg text-gray-300">
+            Join Discord.
+          </p>
+          <div class="h-64 glass rounded-xl flex items-center justify-center">
+            <span class="text-gray-400">This A Gtag Fan Game Made With Unity</span>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="h-64 glass rounded-xl flex items-center justify-center">
+            <span class="text-gray-400">Made By Danks</span>
+          </div>
+          <p class="text-lg text-gray-300">
+            Danks Is Sigma.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="min-h-screen relative">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"></div>
+    <div class="relative glass mx-8 my-24 p-12 rounded-2xl">
+      <h2 class="text-4xl font-bold mb-8 gradient-text">Get in Touch</h2>
+      <form class="max-w-2xl mx-auto space-y-6">
+        <div class="space-y-2">
+          <label class="block text-gray-300">Name</label>
+          <input type="text" class="w-full px-4 py-2 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="space-y-2">
+          <label class="block text-gray-300">Email</label>
+          <input type="email" class="w-full px-4 py-2 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="space-y-2">
+          <label class="block text-gray-300">Message</label>
+          <textarea class="w-full px-4 py-2 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4"></textarea>
+        </div>
+        <button class="w-full px-8 py-4 glass rounded-xl hover:scale-105 transition-transform bg-gradient-to-r from-blue-500/20 to-purple-500/20">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+</body>
 </html>
