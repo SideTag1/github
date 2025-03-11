@@ -30,7 +30,3 @@ button {
     box-shadow: 0 0 0 2px black;
     text-shadow: 0 0 5px rgb(0, 0, 0); /* Add text shadow to buttons */
 }
-
-a {
-    text-decoration: none;
-}
